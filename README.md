@@ -160,4 +160,12 @@ http://localhost:5173
 ---
 ## 📖 How to Use the Application
 
-
+1. Ensure MongoDB is running.
+2. Start the backend server.
+3. Start the frontend server.
+4. Open http://localhost:5173.
+5. Register or log in as a doctor.
+6. Enter patient details.
+7. Upload a CT scan image.
+8. View prediction and confidence score.
+9. Access diagnosis history.
