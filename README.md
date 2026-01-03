@@ -108,13 +108,6 @@ Ensure the following are installed:
 
 ## 2️⃣ Backend Setup (Flask + ML)
 
-### Navigate to backend
-```bash
-cd backend
-```
-
-## 2️⃣ Backend Setup (Flask + ML)
-
 ### Create & activate virtual environment
 
 **Windows**
