@@ -102,3 +102,45 @@ Ensure the following are installed:
 #### Navigate to backend
 ```bash
 cd backend
+```
+
+##### Create & activate virtual environment
+
+Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Mac / Linux
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Dataset structure
+```text
+backend/dataset/
+├── benign/
+└── malignant/
+```
+
+Train the AI model
+```bash
+python train_model.py
+```
+
+Start backend server
+```bash
+python app.py
+```
+
+Backend runs at:
+```bash
+http://localhost:5000
+```
