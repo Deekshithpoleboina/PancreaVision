@@ -88,9 +88,7 @@ This project is not deployed on platforms like Vercel or Render because it invol
 - High compute and storage requirements
 - The application is intended to be run locally for evaluation and learning purposes.
 
----
-
-## 1️⃣ Prerequisites
+### 1️⃣ Prerequisites
 
 Ensure the following are installed:
 
@@ -99,10 +97,8 @@ Ensure the following are installed:
 - MongoDB Community Server (running on `localhost:27017`)
 - Git
 
----
+### 2️⃣ Backend Setup (Flask + ML)
 
-## 2️⃣ Backend Setup (Flask + ML)
-
-### Navigate to backend
+#### Navigate to backend
 ```bash
 cd backend
