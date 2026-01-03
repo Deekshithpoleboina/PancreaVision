@@ -1,16 +1,73 @@
-# React + Vite
+# 🏥 PancreaVision — AI-Powered Pancreatic Cancer Detection System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PancreaVision is a **full-stack AI-based medical diagnostic prototype** developed as a **final-year BE Computer Science project**.  
+It demonstrates how **Deep Learning models** can be integrated into a real-world web application to assist in the **early detection of pancreatic cancer** from CT scan images.
 
-Currently, two official plugins are available:
+![Status](https://img.shields.io/badge/Status-Final%20Year%20Project-orange)
+![Stack](https://img.shields.io/badge/Stack-React%20%7C%20Flask%20%7C%20TensorFlow-blue)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> ⚠️ **Medical Disclaimer**  
+> This software is a **research and educational prototype only**.  
+> It is **not a certified medical device** and must **not** be used for real clinical diagnosis or treatment decisions.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **AI-Based Diagnosis**
+  - Uses a **ResNet50-based transfer learning model** with custom classification layers to classify CT scans as **Benign** or **Malignant**.
+- **Prediction Confidence**
+  - Displays probability scores to indicate diagnostic confidence.
+- **Patient Data Management**
+  - Stores patient details and diagnosis history for reference.
+- **Doctor Authentication**
+  - Basic login and signup functionality using hashed credentials.
+- **Interactive Dashboard**
+  - Clean and responsive UI built with **React + Tailwind CSS**.
+- **Local Database Storage**
+  - Patient records stored in a **local MongoDB database**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Axios
+- React Router DOM
+
+### Backend
+- Python (Flask)
+- TensorFlow / Keras
+- MongoDB (Community Edition – Local)
+- Pillow (Image Processing)
+- NumPy
+
+### Machine Learning
+- Model: **ResNet50 (Transfer Learning)**
+- Input: 2D CT scan slices
+- Output: Binary classification (Benign / Malignant)
+
+---
+
+## 📂 Project Structure
+
+```text
+PancreaVision/
+├── backend/
+│   ├── dataset/
+│   │   ├── benign/
+│   │   └── malignant/
+│   ├── app.py
+│   ├── train_model.py
+│   ├── pancreas_model.h5
+│   └── requirements.txt
+│
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   └── pages/
+    ├── package.json
+    └── vite.config.js
+```
