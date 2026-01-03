@@ -169,3 +169,13 @@ http://localhost:5173
 7. Upload a CT scan image.
 8. View prediction and confidence score.
 9. Access diagnosis history.
+---
+
+## 🧠 How the AI Model Works
+- Input: CT scan resized to 224 × 224
+- Feature Extraction: ResNet50 CNN extracts visual patterns
+- Classification: Custom dense layers analyze features
+- Output:
+- - Value between 0 and 1
+-- > 0.5 → Malignant
+-- ≤ 0.5 → Benign
