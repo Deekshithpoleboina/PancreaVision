@@ -71,3 +71,9 @@ PancreaVision/
     ├── package.json
     └── vite.config.js
 ```
+
+---
+
+>⚠️ **Dataset Note**
+> The dataset images are included only for academic demonstration and ease of local testing.
+> In real-world production systems, medical datasets would never be committed to version control and would be stored using secure, compliant storage solutions.
