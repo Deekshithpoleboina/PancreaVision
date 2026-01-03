@@ -73,6 +73,7 @@ PancreaVision/
     ├── package.json
     └── vite.config.js
 ```
+---
 ## ⚠️ Dataset Note
 
 The dataset images are included **only for academic demonstration and ease of local testing**.  
