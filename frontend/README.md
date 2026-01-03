@@ -144,3 +144,20 @@ Backend runs at:
 ```bash
 http://localhost:5000
 ```
+### 3️⃣ Frontend Setup (React)
+
+Open a new terminal:
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs at:
+```bash
+http://localhost:5173
+```
+---
+## 📖 How to Use the Application
+
+
