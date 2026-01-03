@@ -72,8 +72,37 @@ PancreaVision/
     └── vite.config.js
 ```
 
----
-
 >⚠️ **Dataset Note**
 > The dataset images are included only for academic demonstration and ease of local testing.
 > In real-world production systems, medical datasets would never be committed to version control and would be stored using secure, compliant storage solutions.
+
+---
+
+## ⚙️ Installation & Local Setup
+
+### ❗ Deployment Note
+This project is not deployed on platforms like Vercel or Render because it involves:
+
+- Large medical image datasets
+- Local ML model execution
+- High compute and storage requirements
+- The application is intended to be run locally for evaluation and learning purposes.
+
+---
+
+## 1️⃣ Prerequisites
+
+Ensure the following are installed:
+
+- Python **3.8+**
+- Node.js & npm
+- MongoDB Community Server (running on `localhost:27017`)
+- Git
+
+---
+
+## 2️⃣ Backend Setup (Flask + ML)
+
+### Navigate to backend
+```bash
+cd backend
