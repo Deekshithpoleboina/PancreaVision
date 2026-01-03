@@ -179,3 +179,22 @@ http://localhost:5173
   - Value between 0 and 1
   - _> 0.5 → Malignant
   - ≤ 0.5 → Benign
+---
+
+## 🎯 Learning Outcomes
+- End-to-end product development
+- Integrating ML models into real applications
+- Frontend–backend communication
+- Debugging and refactoring complex systems
+- Practical experience with AI-driven products
+---
+
+## 🤝 Contributing
+
+This project is open for learning and improvement.
+Suggestions related to:
+
+- Model accuracy
+- UI enhancements
+- Code refactoring are welcome.
+---
