@@ -177,5 +177,5 @@ http://localhost:5173
 - Classification: Custom dense layers analyze features
 - Output:
   - Value between 0 and 1
-  - > 0.5 → Malignant
+  - _> 0.5 → Malignant
   - ≤ 0.5 → Benign
