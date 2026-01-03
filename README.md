@@ -198,3 +198,7 @@ Suggestions related to:
 - UI enhancements
 - Code refactoring are welcome.
 ---
+
+## 📄 License
+
+This project is licensed under the MIT License and is intended strictly for educational use.
