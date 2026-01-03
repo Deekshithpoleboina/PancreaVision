@@ -1,6 +1,6 @@
 # 🏥 PancreaVision — AI-Powered Pancreatic Cancer Detection System
 
-PancreaVision is a **full-stack AI-based medical diagnostic prototype** developed as a **final-year BE Computer Science project**.  
+PancreaVision is a **full-stack AI-based medical diagnostic prototype** developed as a **final-year B.Tech Computer Science project**.  
 It demonstrates how **Deep Learning models** can be integrated into a real-world web application to assist in the **early detection of pancreatic cancer** from CT scan images.
 
 ![Status](https://img.shields.io/badge/Status-Final%20Year%20Project-orange)
