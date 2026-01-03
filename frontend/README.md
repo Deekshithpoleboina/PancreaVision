@@ -104,7 +104,7 @@ Ensure the following are installed:
 cd backend
 ```
 
-##### Create & activate virtual environment
+#### Create & activate virtual environment
 
 Windows
 ```bash
