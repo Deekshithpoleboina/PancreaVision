@@ -193,6 +193,10 @@ This project is open for learning and improvement.
 Suggestions related to:
 - Model accuracy
 - UI enhancements
-- Code refactoring  
+- Code refactoring are welcome.
 
-are welcome.
+---
+
+## 📄 License
+
+This project is licensed under the MIT License and is intended strictly for educational use.
