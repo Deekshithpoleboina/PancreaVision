@@ -176,6 +176,6 @@ http://localhost:5173
 - Feature Extraction: ResNet50 CNN extracts visual patterns
 - Classification: Custom dense layers analyze features
 - Output:
-- - Value between 0 and 1
--- > 0.5 → Malignant
--- ≤ 0.5 → Benign
+  - Value between 0 and 1
+  - > 0.5 → Malignant
+  - ≤ 0.5 → Benign
