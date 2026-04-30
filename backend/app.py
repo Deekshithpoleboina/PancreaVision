@@ -16,9 +16,10 @@ CORS(app)
 bcrypt = Bcrypt(app)
 
 # --- MONGODB CONNECTION ---
-# Assumes MongoDB is running locally on port 27017
-client = MongoClient('mongodb://localhost:27017/')
-db = client['pancreas_app_db']
+MONGODB_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017/')
+MONGODB_DB_NAME = os.getenv('MONGODB_DB', 'pancreas_app_db')
+client = MongoClient(MONGODB_URI)
+db = client[MONGODB_DB_NAME]
 users_collection = db['users']
 history_collection = db['history']
 

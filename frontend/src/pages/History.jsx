@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Search } from 'lucide-react';
 
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '');
+
 const History = () => {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -11,7 +13,7 @@ const History = () => {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/history/${username}`);
+        const res = await axios.get(`${API_BASE_URL}/history/${username}`);
         setRecords(res.data);
       } catch (err) {
         console.error("Failed to fetch history");

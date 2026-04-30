@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 
+const API_BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/$/, '');
+
 const Login = ({ setAuth }) => {
   const [creds, setCreds] = useState({ username: '', password: '' });
   const [error, setError] = useState('');
@@ -10,7 +12,7 @@ const Login = ({ setAuth }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/login', creds);
+      const res = await axios.post(`${API_BASE_URL}/login`, creds);
       localStorage.setItem('username', res.data.username);
       setAuth(true);
       navigate('/');
