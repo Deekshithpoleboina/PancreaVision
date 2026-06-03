@@ -26,8 +26,8 @@ It demonstrates how **Deep Learning models** can be integrated into a real-world
 - **Interactive Dashboard**  
   Clean and responsive UI built with **React + Tailwind CSS**.
 
-- **Local Database Storage**  
-  Patient records stored in a **local MongoDB database**.
+- **Database Storage**  
+  Patient records stored in **MongoDB Atlas or a local MongoDB database** via `MONGODB_URI`.
 
 ---
 
@@ -42,7 +42,7 @@ It demonstrates how **Deep Learning models** can be integrated into a real-world
 ### Backend
 - Python (Flask)
 - TensorFlow / Keras
-- MongoDB (Community Edition – Local)
+- MongoDB (Atlas or Local)
 - Pillow (Image Processing)
 - NumPy
 
@@ -85,13 +85,7 @@ In real-world production systems, **medical datasets would never be committed to
 
 ### ❗ Deployment Note
 
-This project is **not deployed** on platforms like Vercel or Render because it involves:
-
-- Large medical image datasets
-- Local ML model execution
-- High compute and storage requirements
-
-The application is intended to be **run locally** for evaluation and learning purposes.
+This project can be deployed with a **Render backend** and **Vercel frontend** (see deployment steps below).
 
 ---
 
@@ -101,7 +95,7 @@ Ensure the following are installed:
 
 - Python **3.8+**
 - Node.js & npm
-- MongoDB Community Server (running on `localhost:27017`)
+- MongoDB Atlas connection string or a local MongoDB server
 - Git
 
 ---
@@ -123,6 +117,11 @@ source venv/bin/activate
 **Install dependencies**
 ```bash
 pip install -r requirements.txt
+```
+**Configure environment**
+```bash
+export MONGODB_URI="mongodb+srv://<user>:<password>@<cluster>/<db>?retryWrites=true&w=majority"
+export MONGODB_DB="pancreas_app_db"
 ```
 **Dataset structure**
 ```text
@@ -156,6 +155,22 @@ http://localhost:5000
 7. Upload a CT scan image.
 8. View prediction and confidence score.
 9. Access diagnosis history.
+
+---
+
+## ☁️ Deployment (Render + Vercel)
+
+### Backend (Render)
+1. Create a new **Web Service** in Render with the repo and select the `backend` root directory.
+2. Set the environment variables:
+   - `MONGODB_URI` (MongoDB Atlas connection string)
+   - `MONGODB_DB` (optional, defaults to `pancreas_app_db`)
+3. Deploy the service.
+
+### Frontend (Vercel)
+1. Import the repo in Vercel and set the root directory to `frontend/`.
+2. Set `VITE_API_URL` to your Render backend URL.
+3. Deploy.
 
 ---
 

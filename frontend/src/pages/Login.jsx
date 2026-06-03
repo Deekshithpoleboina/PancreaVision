@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { API_BASE_URL } from '../config/api';
 
 const Login = ({ setAuth }) => {
   const [creds, setCreds] = useState({ username: '', password: '' });
@@ -10,7 +11,7 @@ const Login = ({ setAuth }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/login', creds);
+      const res = await axios.post(`${API_BASE_URL}/login`, creds);
       localStorage.setItem('username', res.data.username);
       setAuth(true);
       navigate('/');

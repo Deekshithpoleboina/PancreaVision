@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
+import { API_BASE_URL } from '../config/api';
 
 const Signup = () => {
   const [creds, setCreds] = useState({ username: '', password: '' });
@@ -9,7 +10,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/signup', creds);
+      await axios.post(`${API_BASE_URL}/signup`, creds);
       alert('Registration successful! Please login.');
       navigate('/login');
     } catch (err) {

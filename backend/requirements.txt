@@ -5,3 +5,4 @@ pymongo
 tensorflow
 pillow
 numpy
+gunicorn==22.0.0

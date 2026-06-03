@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Upload, FileText, AlertTriangle, CheckCircle } from 'lucide-react';
+import { API_BASE_URL } from '../config/api';
 
 const Dashboard = () => {
   const [formData, setFormData] = useState({
@@ -34,7 +35,7 @@ const Dashboard = () => {
     Object.keys(formData).forEach((key) => data.append(key, formData[key]));
 
     try {
-      const res = await axios.post('http://localhost:5000/predict', data);
+      const res = await axios.post(`${API_BASE_URL}/predict`, data);
       setResult(res.data);
     } catch (err) {
       console.error(err);
